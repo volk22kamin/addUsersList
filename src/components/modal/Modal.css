@@ -1,0 +1,51 @@
+.dark-screen {
+  background-color: #000000aa;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container {
+  background-color: rgb(210, 200, 200);
+  width: 450px;
+  /* height: 190px; */
+  border-radius: 7px;
+}
+.modal-container .header {
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px;
+  border-radius: 7px 7px 0px 0px;
+}
+.innerText {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;
+  justify-content: space-around; */
+  padding: 10px;
+  gap: 50px;
+}
+.msg {
+  font-size: 26px;
+}
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+.innerText button {
+  width: 33%;
+  padding: 10px;
+  font-size: large;
+  letter-spacing: 1px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}

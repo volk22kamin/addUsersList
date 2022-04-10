@@ -1,0 +1,6 @@
+body {
+  background-color: rgb(35, 31, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

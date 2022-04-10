@@ -1,0 +1,15 @@
+.singleItem {
+  background-color: white;
+  /* padding: 0.5px; */
+  /* height: 30px; */
+  font-size: 20px;
+  border-radius: 3px;
+}
+.singleItem p {
+  border-radius: 3px;
+  border: 1px solid rgb(100, 88, 88);
+  padding: 8px;
+}
+.singleItem:hover {
+  cursor: pointer;
+}
