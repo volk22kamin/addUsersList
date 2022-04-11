@@ -8,14 +8,14 @@ const AddUser = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-    if (name.length !== 0 && age > 0) props.onAddUser({ name: name, age: age });
+    if (name.length !== 0 && +age > 0)
+      props.onAddUser({ name: name, age: age });
     else {
       if (name.length === 0) {
         props.onErrorInput(true, "you did not enter a name");
-      } else if (age <= 0)
+      } else if (+age <= 0)
         props.onErrorInput(true, "you did not enter a valid age");
     }
-    document.getElementById("form").reset();
     setAge("");
     setName("");
   };
@@ -31,9 +31,14 @@ const AddUser = (props) => {
     <div className="form-container">
       <form id="form" onSubmit={submitFormHandler}>
         <label htmlFor="username">User Name</label>
-        <input id="username" type="text" onChange={nameChangeHandler} />
+        <input
+          id="username"
+          type="text"
+          value={name}
+          onChange={nameChangeHandler}
+        />
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type="number" onChange={ageChangeHandler} />
+        <input id="age" type="number" value={age} onChange={ageChangeHandler} />
         <div className="submit-button">
           <Button text={"Add User"} id="addUser" type="submit"></Button>
         </div>

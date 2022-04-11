@@ -6,7 +6,7 @@ const Modal = (props) => {
   };
 
   return (
-    <div className="dark-screen">
+    <div onClick={okayClickHandler} className="dark-screen">
       <div className="modal-container">
         <div className="header">An Error Has Occured</div>
         <div className="innerText">
